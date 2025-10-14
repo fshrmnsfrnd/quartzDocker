@@ -1,0 +1,9 @@
+services:
+    quartz:
+        build: .
+        ports:
+            - "8080:8080"
+        volumes:
+            - "C:/Users/Nico/Nextcloud/Dokumente/Obsidian/Nico:/quartz/content/"
+        environment:
+            - PAGE_TITLE=BOerg Obsidian
