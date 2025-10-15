@@ -1,10 +1,11 @@
-FROM node:latest
-RUN git clone https://github.com/jackyzha0/quartz.git /quartz
-COPY ./quartz.config.ts /quartz/quartz.config.ts
-WORKDIR /quartz
+FROM node:22-slim AS builder
+WORKDIR /usr/src/app
+COPY package.json .
+COPY package-lock.json* .
+RUN npm ci
 
-RUN npm install
-RUN npx quartz create
-EXPOSE 8080
-ENV test true
+FROM node:22-slim
+WORKDIR /usr/src/app
+COPY --from=builder /usr/src/app/ /usr/src/app/
+COPY . .
 CMD ["npx", "quartz", "build", "--serve"]
