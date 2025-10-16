@@ -4,6 +4,6 @@ services:
         ports:
             - "8080:8080"
         volumes:
-            - "C:/Users/Nico/Nextcloud/Dokumente/Obsidian/Nico:/quartz/content/"
+            - C:/Users/Nico/Nextcloud/Dokumente/Obsidian/Nico:/usr/src/app/content/
         environment:
             - PAGE_TITLE=Quartz 4
