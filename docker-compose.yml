@@ -5,3 +5,5 @@ services:
             - "8080:8080"
         volumes:
             - "C:/Users/Nico/Nextcloud/Dokumente/Obsidian/Nico:/quartz/content/"
+        environment:
+            - PAGE_TITLE=Quartz 4

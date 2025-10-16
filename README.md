@@ -2,9 +2,24 @@
 
 Docker Hub: https://hub.docker.com/r/fshrmnsfrnd/quartz/
 
-## Build 
+## Docker Compose
+Prefered way to run this Docker is docker-compose
 ```
-docker pull fshrmnsfrnd/quartz:latest
+services:
+    quartz:
+        name: quartz
+        image: fshrmnsfrnd/quartz
+        ports:
+            - "<port>:8080"
+        volumes:
+            - "<your_local_path_to_md_files>:/quartz/content/"
+        environment:
+            - PAGE_TITLE=Quartz 4
+```
+
+## Run:
+```
+docker pull
 docker compose up -d
 ```
 
