@@ -15,12 +15,12 @@ const config: QuartzConfig = {
         analytics: {
             provider: "plausible",
         },
-        locale: process.env.locale ?? "en-US",
+        locale: (process.env.locale) as any ?? "en-US",
         baseUrl: process.env.BASE_URL ?? "quartz.jzhao.xyz",
         ignorePatterns: process.env.IGNORE_PATTERNS ? process.env.IGNORE_PATTERNS.split(",") : ["private", "templates", ".obsidian"],
-        defaultDateType: process.env.DEFAULT_DATE_TYPE ?? "modified",
+        defaultDateType: (process.env.DEFAULT_DATE_TYPE) as any ?? "modified",
         theme: {
-            fontOrigin: process.env.FONT_ORIGIN ?? "googleFonts",
+            fontOrigin: (process.env.FONT_ORIGIN) as any ?? "googleFonts",
             cdnCaching: true,
             typography: {
                 header: process.env.TYPOGRAPHY_HEADER ?? "Schibsted Grotesk",
@@ -72,6 +72,7 @@ const config: QuartzConfig = {
             Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
             Plugin.Description(),
             Plugin.Latex({ renderEngine: "katex" }),
+            Plugin.excalidrawToSvg(),
         ],
         filters: [Plugin.RemoveDrafts()],
         emitters: [
