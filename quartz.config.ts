@@ -37,7 +37,7 @@ const config: QuartzConfig = {
                     secondary: process.env.LIGHT_MODE_SECONDARY ?? "#284b63",
                     tertiary: process.env.LIGHT_MODE_TERTIARY ?? "#84a59d",
                     highlight: process.env.LIGHT_MODE_HIGHLIGHT ?? "rgba(143, 159, 169, 0.15)",
-                    textHighlight: "#fff23688",
+                    textHighlight: process.env.LIGHT_MODE_TEXT_HIGHLIGHT ??"#fff23688",
                 },
                 darkMode: {
                     light: process.env.DARK_MODE_LIGHT ?? "#161618",
