@@ -14,11 +14,11 @@ services:
         volumes:
             - <your_local_path_to_md_files>:/usr/src/app/content/
         environment:
-            - PAGE_TITLE="Nico's Garden"
+            - PAGE_TITLE="Quartz 4"
             - PAGE_TITLE_SUFFIX=""
             - ENABLE_SPA="true"
             - ENABLE_POPOVERS="true"
-            - BASE_URL=garden.fshrmnsfrnd.ddnss.de
+            - BASE_URL="mygarden.com"
             - IGNORE_PATTERNS=["private", "templates", ".obsidian"]
             - DEFAULT_DATE_TYPE="modified"
             - FONT_ORIGIN="googleFonts"
