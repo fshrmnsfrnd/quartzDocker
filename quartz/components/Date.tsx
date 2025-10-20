@@ -1,3 +1,4 @@
+import { now } from "d3"
 import { GlobalConfiguration } from "../cfg"
 import { ValidLocale } from "../i18n"
 import { QuartzPluginData } from "../plugins/vfile"
@@ -27,5 +28,5 @@ export function formatDate(d: Date, locale: ValidLocale = "en-US"): string {
 }
 
 export function Date({ date, locale }: Props) {
-  return <time datetime={date.toISOString()}>{formatDate(date, locale)}</time>
+  return <time datetime={date.toISOString() ?? now().toString()}>{formatDate(date, locale)}</time>
 }
