@@ -2,8 +2,6 @@
 services:
     quartz:
         image: fshrmnsfrnd/quartz
-        ports:
-            - "8080:8080"
         volumes:
             - ./content/:/usr/src/app/content/:ro
             - quartz_public:/usr/src/app/public/:rw
@@ -35,7 +33,6 @@ services:
             - DARK_MODE_SECONDARY=#7b97aa
             - DARK_MODE_TERTIARY=#84a59d
             - DARK_MODE_TEXT_HIGHLIGHT=#b3aa0288
-        restart: always
         command: >
             sh -c "
               while true; do
@@ -46,6 +43,7 @@ services:
                 sleep 3600;
               done
             "
+        restart: always
 
     nginx:
         image: nginx:latest
@@ -56,6 +54,7 @@ services:
             - quartz_public:/usr/share/nginx/html:ro
         depends_on:
             - quartz
+        restart: always
 
 volumes:
     quartz_public:

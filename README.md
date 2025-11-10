@@ -5,14 +5,13 @@ Docker Hub: https://hub.docker.com/r/fshrmnsfrnd/quartz/
 ## Docker Compose
 Prefered way to run this Docker is docker-compose
 ```
+
 services:
     quartz:
-        name: quartz
         image: fshrmnsfrnd/quartz
-        ports:
-            - <port>:8080
         volumes:
-            - <your_local_path_to_md_files>:/usr/src/app/content/
+            - <path_to_obsidian>:/usr/src/app/content/:ro
+            - quartz_public:/usr/src/app/public/:rw
         environment:
             - PAGE_TITLE=Quartz 4
             - PAGE_TITLE_SUFFIX=
@@ -41,6 +40,31 @@ services:
             - DARK_MODE_SECONDARY=#7b97aa
             - DARK_MODE_TERTIARY=#84a59d
             - DARK_MODE_TEXT_HIGHLIGHT=#b3aa0288
+        restart: always
+        command: >
+            sh -c "
+              while true; do
+                echo \"[builder] start $(date)\";
+                cd /usr/src/app/;
+                npx quartz build --output ./public/quartz && echo \"build success\" || echo \"build failed\";
+                cp -r /usr/src/app/public/quartz/* /usr/src/app/public/nginx/  && echo \"copy success\"|| echo \"copy failed\";
+                sleep 3600;
+              done
+            "
+
+    nginx:
+        image: nginx:latest
+        ports:
+            - "80:80"
+        volumes:
+            - <path_to_your_./nginx.conf>:/etc/nginx/nginx.conf:ro
+            - quartz_public:/usr/share/nginx/html:ro
+        depends_on:
+            - quartz
+
+volumes:
+    quartz_public:
+        
 ```
 
 ## Run:
