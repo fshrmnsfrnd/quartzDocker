@@ -4,13 +4,12 @@ Docker Hub: https://hub.docker.com/r/fshrmnsfrnd/quartz/
 
 ## Docker Compose
 Prefered way to run this Docker is docker-compose
-```
-
+```yml
 services:
     quartz:
         image: fshrmnsfrnd/quartz
         volumes:
-            - <path_to_obsidian>:/usr/src/app/content/:ro
+            - ./content/:/usr/src/app/content/:ro
             - quartz_public:/usr/src/app/public/:rw
         environment:
             - PAGE_TITLE=Quartz 4
@@ -18,7 +17,7 @@ services:
             - ENABLE_SPA=true
             - ENABLE_POPOVERS=true
             - BASE_URL=mygarden.com
-            - IGNORE_PATTERNS=private, templates, .obsidian
+            - IGNORE_PATTERNS=private,templates,.obsidian
             - DEFAULT_DATE_TYPE=modified
             - FONT_ORIGIN=googleFonts
             - TYPOGRAPHY_HEADER=Schibsted Grotesk
@@ -40,38 +39,50 @@ services:
             - DARK_MODE_SECONDARY=#7b97aa
             - DARK_MODE_TERTIARY=#84a59d
             - DARK_MODE_TEXT_HIGHLIGHT=#b3aa0288
-        restart: always
         command: >
             sh -c "
-              while true; do
-                echo \"[builder] start $(date)\";
-                cd /usr/src/app/;
-                npx quartz build --output ./public/quartz && echo \"build success\" || echo \"build failed\";
-                cp -r /usr/src/app/public/quartz/* /usr/src/app/public/nginx/  && echo \"copy success\"|| echo \"copy failed\";
-                sleep 3600;
-              done
+                mkdir -p /usr/src/app/public/quartz;
+                mkdir -p /usr/src/app/public/nginx;
+                while true; do
+                    echo \"build start $(date)\";
+                    cd /usr/src/app/;
+                    npx quartz build --output ./public/quartz && build_status=\"success\" || build_status=\"failed\";
+                    
+                    if build_status=\"success\"; then
+                        cp -r /usr/src/app/public/quartz/* /usr/src/app/public/nginx/  && echo \"copy success $(date)\"|| echo \"copy failed $(date)\";
+                    else
+                        echo \"build failed $(date)\";
+                        echo \"copy aborted $(date)\";
+                    fi
+                    
+                    sleep 3600;
+                done
             "
+        restart: always
 
     nginx:
         image: nginx:latest
         ports:
             - "80:80"
         volumes:
-            - <path_to_your_./nginx.conf>:/etc/nginx/nginx.conf:ro
+            - ./nginx.conf:/etc/nginx/nginx.conf:ro
             - quartz_public:/usr/share/nginx/html:ro
         depends_on:
             - quartz
+        restart: always
 
 volumes:
-    quartz_public:
-        
+    quartz_public:        
 ```
 
 ## Run:
-```
-docker pull
+```sh
 docker compose up -d
 ```
 
 ## Configuration
 The variables in the `quartz.config.ts` file can be configured via environment variables in the `docker-compose.yml`
+
+You have to mount the `nginx.conf` into the nginx container, so you have to download it, and put it somewhere on your system.
+
+If you want to change how often the build runs, just change the seconds of `sleep` in the command of the quartz container.
