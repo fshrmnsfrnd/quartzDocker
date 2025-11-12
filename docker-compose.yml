@@ -11,7 +11,7 @@ services:
             - ENABLE_SPA=true
             - ENABLE_POPOVERS=true
             - BASE_URL=mygarden.com
-            - IGNORE_PATTERNS=private, templates, .obsidian
+            - IGNORE_PATTERNS=private,templates,.obsidian
             - DEFAULT_DATE_TYPE=modified
             - FONT_ORIGIN=googleFonts
             - TYPOGRAPHY_HEADER=Schibsted Grotesk
@@ -35,16 +35,18 @@ services:
             - DARK_MODE_TEXT_HIGHLIGHT=#b3aa0288
         command: >
             sh -c "
+                mkdir -p /usr/src/app/public/quartz;
+                mkdir -p /usr/src/app/public/nginx;
                 while true; do
-                    echo \"[builder] start $(date)\";
+                    echo \"build start $(date)\";
                     cd /usr/src/app/;
                     npx quartz build --output ./public/quartz && build_status=\"success\" || build_status=\"failed\";
                     
                     if build_status=\"success\"; then
-                        cp -r /usr/src/app/public/quartz/* /usr/src/app/public/nginx/  && echo \"copy success\"|| echo \"copy failed\";
+                        cp -r /usr/src/app/public/quartz/* /usr/src/app/public/nginx/  && echo \"copy success $(date)\"|| echo \"copy failed $(date)\";
                     else
-                        echo \"build failed\";
-                        echo \"copy aborted\";
+                        echo \"build failed $(date)\";
+                        echo \"copy aborted $(date)\";
                     fi
                     
                     sleep 3600;
