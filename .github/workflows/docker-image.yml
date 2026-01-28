@@ -17,6 +17,6 @@ jobs:
       with:
         username: fshrmnsfrnd
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag fshrmnsfrnd/quartz:latest
