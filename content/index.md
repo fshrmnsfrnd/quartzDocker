@@ -8,4 +8,6 @@ Hier sind Rezepte die ich gerne koche und backe.
 Meine Mitschriften aus der Technikerschule. Sollte jemand von hier abschreiben: 
 Keine Garantie, dass hier irgendwas stimmt.
 
+![[index 2026-06-11 21.23.10.excalidraw]]
+
 Das sind meine Notizen aus [Obsidian](https://obsidian.md/) und mit [Quartz](https://quartz.jzhao.xyz/) mit meinem [Excalidraw Plugin](https://github.com/fshrmnsfrnd/quartzDocker) gehostet.
