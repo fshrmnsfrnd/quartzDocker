@@ -1,11 +1,3 @@
-@use "./base.scss";
+@use "./variables.scss" as *;
 
 // put your custom CSS here!
-article>*{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.page article p>strong , strong{
-    color: var(--textHighlight);
-}
