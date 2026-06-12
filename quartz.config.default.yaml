@@ -41,26 +41,6 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
-  # Transformer (parses frontmatter)
-  - source: github:quartz-community/note-properties
-    enabled: true
-    options:
-      includeAll: false
-      includedProperties:
-        - description
-        - tags
-        - aliases
-      excludedProperties: []
-      hidePropertiesView: false
-      delimiters: "---"
-      language: yaml
-
-  # Component (displays properties in the page layout)
-  - source: github:quartz-community/note-properties
-    enabled: true
-    layout:
-      position: beforeBody
-      priority: 15
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
@@ -243,11 +223,11 @@ plugins:
   - source: github:quartz-community/note-properties
     enabled: true
     options:
-      includeAll: false
-      includedProperties:
-        - description
-        - tags
-        - aliases
+      includeAll: true
+      #includedProperties:
+      #  - description
+      #  - tags
+      #  - aliases
       excludedProperties: []
       hidePropertiesView: false
       delimiters: ---
