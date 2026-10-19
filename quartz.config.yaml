@@ -1,17 +1,19 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Nicos Garden
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  locale: de-DE
+  baseUrl: garden.fshrmnsfrnd.ddnss.de
   ignorePatterns:
     - private
     - templates
     - .obsidian
+    - Privat
+    - Feuerwehr
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
@@ -25,13 +27,13 @@ configuration:
         lightgray: "#e5e5e5"
         gray: "#b8b8b8"
         darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
+        dark: "#565980"
+        secondary: "#597384"
         tertiary: "#84a59d"
         highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        textHighlight: "#af02ff"
       darkMode:
-        light: "#161618"
+        light: "#15191d"
         lightgray: "#393639"
         gray: "#646464"
         darkgray: "#d4d4d4"
@@ -39,7 +41,7 @@ configuration:
         secondary: "#7b97aa"
         tertiary: "#84a59d"
         highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        textHighlight: "#4a9a82"
 plugins:
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
