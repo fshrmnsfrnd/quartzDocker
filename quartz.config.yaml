@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: de-DE
-  baseUrl: garden.nicon.app
+  baseUrl: garden.nicocino.de
   ignorePatterns:
     - private
     - templates
