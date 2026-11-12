@@ -10,6 +10,7 @@ COPY package-lock.json* .
 COPY .npmrc* .
 COPY quartz/ ./quartz/
 COPY quartz.lock.json* .
+COPY myPlugins/ ./myPlugins/
 RUN npm install; npx quartz plugin install
 
 FROM node:22-slim
