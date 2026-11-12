@@ -252,6 +252,11 @@ plugins:
       position: afterBody
       priority: 50
       display: all
+  - source: ./myPlugins/dataviewjs
+    enabled: true
+    options:
+      proxyUrl: https://api.allorigins.win/raw?url=
+    order: 50
 layout:
   groups:
     toolbar:

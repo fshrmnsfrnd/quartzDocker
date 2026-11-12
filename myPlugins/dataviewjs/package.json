@@ -1,0 +1,16 @@
+{
+  "name": "quartz-plugin-dataviewjs",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "quartz": {
+    "category": "transformer",
+    "defaultOptions": {
+      "proxyUrl": "https://api.allorigins.win/raw?url="
+    }
+  }
+}

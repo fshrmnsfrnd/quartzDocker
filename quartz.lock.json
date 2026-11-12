@@ -79,6 +79,12 @@
       "commit": "cc19caffb47798aac2c53155810237132e131e65",
       "installedAt": "2026-10-22T13:44:34.519Z"
     },
+    "dataviewjs": {
+      "source": "./myPlugins/dataviewjs",
+      "resolved": "/home/nico/Projects/quartzDocker/myPlugins/dataviewjs",
+      "commit": "local",
+      "installedAt": "2026-11-12T15:04:15.728Z"
+    },
     "description": {
       "source": "github:quartz-community/description",
       "resolved": "https://github.com/quartz-community/description.git",
