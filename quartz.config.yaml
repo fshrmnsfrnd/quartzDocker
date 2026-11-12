@@ -257,6 +257,12 @@ plugins:
     options:
       proxyUrl: https://api.allorigins.win/raw?url=
     order: 50
+  - source: ./myPlugins/removeUnusedAssets
+    enabled: true
+    options:
+      paths:
+        - src
+    order: 50
 layout:
   groups:
     toolbar:

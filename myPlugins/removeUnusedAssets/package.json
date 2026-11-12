@@ -1,0 +1,16 @@
+{
+  "name": "quartz-plugin-prune-unused-assets",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "quartz": {
+    "category": "emitter",
+    "defaultOptions": {
+      "paths": ["src"]
+    }
+  }
+}

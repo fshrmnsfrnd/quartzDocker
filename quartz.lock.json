@@ -216,6 +216,12 @@
       "commit": "28229202d481d5a41dc38e57ce320c561d20d0e8",
       "installedAt": "2026-10-22T13:44:36.748Z"
     },
+    "removeUnusedAssets": {
+      "source": "./myPlugins/removeUnusedAssets",
+      "resolved": "/home/nico/Projects/quartzDocker/myPlugins/removeUnusedAssets",
+      "commit": "local",
+      "installedAt": "2026-11-12T15:12:49.250Z"
+    },
     "roam": {
       "source": "github:quartz-community/roam",
       "resolved": "https://github.com/quartz-community/roam.git",
