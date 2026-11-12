@@ -11,7 +11,7 @@ COPY .npmrc* .
 COPY quartz/ ./quartz/
 COPY quartz.lock.json* .
 COPY myPlugins/ ./myPlugins/
-RUN npm install; npx quartz plugin install
+RUN npm install; npx quartz plugin install --from-config
 
 FROM node:22-slim
 WORKDIR /usr/src/app
