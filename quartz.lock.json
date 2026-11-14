@@ -79,6 +79,12 @@
       "commit": "cc19caffb47798aac2c53155810237132e131e65",
       "installedAt": "2026-10-22T13:44:34.519Z"
     },
+    "dataviewjs": {
+      "source": "github:fshrmnsfrnd/dataviewjs",
+      "resolved": "https://github.com/fshrmnsfrnd/dataviewjs.git",
+      "commit": "6665560f714b4f142f6dcff2c3bb76252ce5b1a9",
+      "installedAt": "2026-11-14T23:30:29.552Z"
+    },
     "description": {
       "source": "github:quartz-community/description",
       "resolved": "https://github.com/quartz-community/description.git",

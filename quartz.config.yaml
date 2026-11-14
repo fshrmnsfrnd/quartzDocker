@@ -252,6 +252,13 @@ plugins:
       position: afterBody
       priority: 50
       display: all
+  - source: github:fshrmnsfrnd/dataviewjs
+    enabled: true
+    options: {}
+    order: 50
+    layout:
+      position: right
+      priority: 50
 layout:
   groups:
     toolbar:
