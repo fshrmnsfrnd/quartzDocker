@@ -4,8 +4,8 @@
     "RemoveUnlinkedNotes": {
       "source": "github:fshrmnsfrnd/RemoveUnlinkedNotes",
       "resolved": "https://github.com/fshrmnsfrnd/RemoveUnlinkedNotes.git",
-      "commit": "992917e624ce59ec2f7b88d054803173dfec623a",
-      "installedAt": "2026-11-15T13:52:06.165Z"
+      "commit": "980a57c06b47033736846b2910069fa562e701e6",
+      "installedAt": "2026-11-15T15:28:16.986Z"
     },
     "alias-redirects": {
       "source": "github:quartz-community/alias-redirects",

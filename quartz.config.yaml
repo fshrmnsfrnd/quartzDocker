@@ -256,9 +256,6 @@ plugins:
     enabled: true
     options: {}
     order: 50
-    layout:
-      position: right
-      priority: 50
   - source: github:fshrmnsfrnd/RemoveUnlinkedNotes
     enabled: true
     options:
