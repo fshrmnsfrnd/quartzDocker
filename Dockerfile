@@ -9,6 +9,7 @@ WORKDIR /usr/src/app
 COPY package.json ./
 COPY package-lock.json* ./
 COPY .npmrc* ./
+COPY quartz/ ./quartz/
 COPY quartz.lock.json* ./
 COPY quartz.config.yaml ./
 
