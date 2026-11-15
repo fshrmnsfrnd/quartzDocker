@@ -259,6 +259,12 @@ plugins:
     layout:
       position: right
       priority: 50
+  - source: github:fshrmnsfrnd/RemoveUnlinkedNotes
+    enabled: true
+    options:
+      folders:
+        - src
+    order: 50
 layout:
   groups:
     toolbar:

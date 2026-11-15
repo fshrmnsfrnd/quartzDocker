@@ -1,6 +1,12 @@
 {
   "version": "1.0.0",
   "plugins": {
+    "RemoveUnlinkedNotes": {
+      "source": "github:fshrmnsfrnd/RemoveUnlinkedNotes",
+      "resolved": "https://github.com/fshrmnsfrnd/RemoveUnlinkedNotes.git",
+      "commit": "607e9225e793b899d613405dae8f2d3f4832d36f",
+      "installedAt": "2026-11-15T00:10:35.462Z"
+    },
     "alias-redirects": {
       "source": "github:quartz-community/alias-redirects",
       "resolved": "https://github.com/quartz-community/alias-redirects.git",
