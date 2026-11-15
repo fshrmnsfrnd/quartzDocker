@@ -47,13 +47,7 @@ configuration:
     enableSiteMap: true
     enableRSS: true
 plugins:
-  - source: github:quartz-community/obsidian-plugin-excalidraw
-    enabled: true
-    options:
-      enableInteraction: true
-      darkMode: "auto"
-      exportPadding: 20
-  - source: github:quartz-community/created-modified-date
+  - source: "@quartz-community/created-modified-date"
     enabled: true
     options:
       defaultDateType: modified
@@ -222,11 +216,11 @@ plugins:
   - source: "@quartz-community/note-properties"
     enabled: true
     options:
-      includeAll: true
-      #includedProperties:
-      #  - description
-      #  - tags
-      #  - aliases
+      includeAll: false
+      includedProperties:
+        - description
+        - tags
+        - aliases
       excludedProperties: []
       hidePropertiesView: false
     order: 5
