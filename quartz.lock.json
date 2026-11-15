@@ -4,8 +4,8 @@
     "RemoveUnlinkedNotes": {
       "source": "github:fshrmnsfrnd/RemoveUnlinkedNotes",
       "resolved": "https://github.com/fshrmnsfrnd/RemoveUnlinkedNotes.git",
-      "commit": "0e740e1c11b56e9d400cc6729738828ba767b116",
-      "installedAt": "2026-11-15T00:29:13.054Z"
+      "commit": "992917e624ce59ec2f7b88d054803173dfec623a",
+      "installedAt": "2026-11-15T13:52:06.165Z"
     },
     "alias-redirects": {
       "source": "github:quartz-community/alias-redirects",
@@ -88,8 +88,8 @@
     "dataviewjs": {
       "source": "github:fshrmnsfrnd/dataviewjs",
       "resolved": "https://github.com/fshrmnsfrnd/dataviewjs.git",
-      "commit": "6665560f714b4f142f6dcff2c3bb76252ce5b1a9",
-      "installedAt": "2026-11-15T00:29:12.999Z"
+      "commit": "f3c1321e99fa7daebf9cb89546f2d6b132037453",
+      "installedAt": "2026-11-15T13:31:37.248Z"
     },
     "description": {
       "source": "github:quartz-community/description",
