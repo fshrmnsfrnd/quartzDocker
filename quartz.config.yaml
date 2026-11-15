@@ -8,6 +8,8 @@ configuration:
     provider: plausible
   locale: de-DE
   baseUrl: garden.nicocino.de
+  # nur Bilder/PDFs/… kopieren, die eine veröffentlichte Seite verlinkt oder einbettet
+  publishAssets: referenced
   ignorePatterns:
     - private
     - templates

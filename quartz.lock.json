@@ -4,8 +4,8 @@
     "RemoveUnlinkedNotes": {
       "source": "github:fshrmnsfrnd/RemoveUnlinkedNotes",
       "resolved": "https://github.com/fshrmnsfrnd/RemoveUnlinkedNotes.git",
-      "commit": "980a57c06b47033736846b2910069fa562e701e6",
-      "installedAt": "2026-11-15T15:28:16.986Z"
+      "commit": "c04b41abcdc5103b68d610ce4ca7889183857251",
+      "installedAt": "2026-11-15T17:06:10.214Z"
     },
     "dataviewjs": {
       "source": "github:fshrmnsfrnd/dataviewjs",
