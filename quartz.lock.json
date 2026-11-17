@@ -10,8 +10,8 @@
     "dataviewjs": {
       "source": "github:fshrmnsfrnd/dataviewjs",
       "resolved": "https://github.com/fshrmnsfrnd/dataviewjs.git",
-      "commit": "1717627d9c36635c7b76e82052b0e5257a008a9e",
-      "installedAt": "2026-11-15T16:59:38.109Z"
+      "commit": "1528eef5cb35c06a6146601ba4ad67cff785f080",
+      "installedAt": "2026-11-17T15:32:53.519Z"
     },
     "obsidian-plugin-excalidraw": {
       "source": "github:quartz-community/obsidian-plugin-excalidraw",
